@@ -4,7 +4,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2"
+    "axios": "^0.19.2",
+    "hybrids": "^4.1.4"
   },
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
@@ -16,5 +17,10 @@
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server --open"
+  },
+  "bit": {
+    "env": {},
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
   }
 }

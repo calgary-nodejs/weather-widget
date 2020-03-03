@@ -5,20 +5,19 @@ const  HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: './src/index.js',
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
-    hot: true,
+    port: 8090,
   },
   output: {
-    filename: 'main.js',
+    filename: '[name].[hash].js',
     path: path.join(__dirname, 'build'),
   },
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       inject: true,
-      template: path.resolve(__dirname, 'public/index.html'),
+      template: 'public/index.html',
     }),
   ],
 };
